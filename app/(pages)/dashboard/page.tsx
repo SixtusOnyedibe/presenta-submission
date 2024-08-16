@@ -1,0 +1,252 @@
+import Image from 'next/image';
+import addIcon from '../../../public/dashboard/plus-icon.svg';
+import importIcon from '../../../public/dashboard/import-icon.svg';
+import burgerMenu from '../../../public/dashboard/burgermenu-icon.svg';
+import greenUpChart from '../../../public/dashboard/up-chart-mini.svg';
+import greenArrowUp from '../../../public/dashboard/arrow-up-icon.svg';
+import redDownChart from '../../../public/dashboard/down-chart-icon.svg';
+import redArrowUp from '../../../public/dashboard/red-arrow-up-icon.svg';
+import searchIcon from '../../../public/nav/search-lg.svg';
+import filterIcon from '../../../public/dashboard/filter-icon.svg';
+import purpleXicon from '../../../public/dashboard/purple-x-close-icon.svg';
+import checkboxMinus from '../../../public/dashboard/checkbox-base.svg';
+import unchecked from '../../../public/dashboard/checkbox-unchecked.svg';
+import checked from '../../../public/dashboard/checkbox-checked.svg';
+import catalog from '../../../public/dashboard/catalog-icon.svg';
+import progressBar from '../../../public/dashboard/progress-bar.svg';
+import greenDot from '../../../public/dashboard/green-dot.svg';
+import groupImg from '../../../public/dashboard/customers-group-image.svg';
+import deleteIcon from '../../../public/dashboard/delete-icon.svg';
+import editIcon from '../../../public/dashboard/edit-icon.svg';
+import companiesList from './companiesList';
+import SelectedCompanies from '../../../components/dashboard/selected-companies';
+import AdminApproval from '../../../components/dashboard/admin-approval';
+
+export default function page() {
+  return (
+    <div className='w-full relative'>
+      {/* Welcome olivia */}
+      <div className='flex w-full justify-between items-start mb-5'>
+        <div>
+          <h1 className='text-3xl font-semibold text-[#101828]'>
+            Welcome back, Olivia
+          </h1>
+          <p className='text-[#475467]'>
+            Track, manage and forcast your customers and orders.
+          </p>
+        </div>
+        <div className='flex items-center'>
+          <button className='mr-3 bg-white text-sm text-[#344054] border border-[#D0D5DD] px-4 h-[40px] rounded-lg font-semibold flex items-center'>
+            <Image src={importIcon} alt='import icon' className='mr-3' />
+            <p>Import</p>
+          </button>
+          <button className='bg-black text-white px-4 h-[40px] rounded-lg text-sm font-semibold flex items-center'>
+            <Image src={addIcon} alt='plus icon' className='mr-3' />
+            <p>Add</p>
+          </button>
+        </div>
+      </div>
+      {/* Metric */}
+      <div className='grid grid-cols-3 gap-6 w-full'>
+        <div className='border border-[#EAECF0] p-5 w-full col-span-1'>
+          <div className='flex justify-between items-center mb-6'>
+            <p className='mb-6 font-semibold'>Total customers</p>
+            <Image src={burgerMenu} alt='plus icon' className='' />
+          </div>
+          <div className='flex justify-between'>
+            <div>
+              <p className='font-semibold text-4xl mb-4'>2,420</p>
+              <div className='flex'>
+                <Image src={greenArrowUp} alt='plus icon' className='' />
+                <div className='flex text-sm'>
+                  <p className='mr-1 text-[#067647]'>40%</p>
+                  <p>vs last month</p>
+                </div>
+              </div>
+            </div>
+            <Image src={greenUpChart} alt='plus icon' className='w-[120px]' />
+          </div>
+        </div>
+        <div className='border border-[#EAECF0] p-5 w-full col-span-1'>
+          <div className='flex justify-between items-center mb-6'>
+            <p className='mb-6 font-semibold'>Total customers</p>
+            <Image src={burgerMenu} alt='plus icon' className='' />
+          </div>
+          <div className='flex justify-between'>
+            <div>
+              <p className='font-semibold text-4xl mb-4'>1,210</p>
+              <div className='flex'>
+                <Image src={redArrowUp} alt='plus icon' className='' />
+                <div className='flex text-sm'>
+                  <p className='mr-1 text-[#B42318]'>40%</p>
+                  <p>vs last month</p>
+                </div>
+              </div>
+            </div>
+            <Image src={redDownChart} alt='plus icon' className='w-[120px]' />
+          </div>
+        </div>
+        <div className='border border-[#EAECF0] p-5 w-full col-span-1'>
+          <div className='flex justify-between items-center mb-6'>
+            <p className='mb-6 font-semibold'>Total customers</p>
+            <Image src={burgerMenu} alt='plus icon' className='' />
+          </div>
+          <div className='flex justify-between'>
+            <div>
+              <p className='font-semibold text-4xl mb-4'>316</p>
+              <div className='flex'>
+                <Image src={greenArrowUp} alt='plus icon' className='' />
+                <div className='flex text-sm'>
+                  <p className='mr-1 text-[#067647]'>20%</p>
+                  <p>vs last month</p>
+                </div>
+              </div>
+            </div>
+            <Image src={greenUpChart} alt='plus icon' className='w-[120px]' />
+          </div>
+        </div>
+      </div>
+      {/* Filter */}
+      <div className='mt-8 mb-6 flex items-center justify-between'>
+        <div className='flex items-center'>
+          <div className='h-[40px] border border-[#D0D5DD] px-4 flex items-center mr-3 rounded-lg'>
+            <p className='text-sm text-[#344054] mr-3'>All time</p>
+            <Image src={purpleXicon} alt='logo' className='' />
+          </div>
+          <div className='h-[40px] border border-[#D0D5DD] px-4 flex items-center mr-3 rounded-lg'>
+            <p className='text-sm text-[#344054] mr-3'>US, AU, +4</p>
+            <Image src={purpleXicon} alt='logo' className='' />
+          </div>
+          <div className='h-[40px] border border-[#D0D5DD] px-4 flex items-center mr-3 rounded-lg'>
+            <Image src={filterIcon} alt='logo' className='mr-3' />
+            <p className='text-sm text-[#344054]'>More filter</p>
+          </div>
+        </div>
+        <div className='bg-[#F9F9F9] max-w-[320px] h-[40px] rounded-lg flex items-center overflow-hidden pl-3'>
+          <Image src={searchIcon} alt='logo' className='mr-3' />
+          <input
+            type='text'
+            className='w-full h-full bg-inherit border-none outline-none text-[#1E1E1E]'
+            placeholder='Search'
+          />
+        </div>
+      </div>
+
+      {/* Table */}
+      <div className='grid grid-cols-13 text-xs border-b'>
+        <div className='col-span-3 px-6 py-3 flex items-center'>
+          <Image src={checkboxMinus} alt='checkbox icon' className='mr-2' />
+          <p>Company</p>
+        </div>
+        <div className='col-span-2 px-6 py-3'>
+          <p>License use</p>
+        </div>
+        <div className='col-span-1 px-6 py-3'>
+          <p>Status</p>
+        </div>
+        <div className='col-span-2 px-6 py-3'>
+          <p>Users</p>
+        </div>
+        <div className='col-span-4 px-6 py-3'>
+          <p>About</p>
+        </div>
+        <div className='col-span-1 px-6 py-3'>
+          <p></p>
+        </div>
+      </div>
+
+      {/* Table  content*/}
+      {/* <div className='grid grid-cols-13 text-xs border-b'>
+        <div className='col-span-3 px-6 h-[72px] flex items-center'>
+          <Image src={unchecked} alt='checkbox icon' className='mr-2' />
+          <Image src={catalog} alt='checkbox icon' className='mr-2' />
+          <div className='text-sm'>
+            <p className='font-medium text-[#101828]'>Catalog</p>
+            <p className='text-[#475467]'>catalogapp.io</p>
+          </div>
+        </div>
+        <div className='col-span-2 px-6 py-3 flex justify-center items-center'>
+          <Image src={progressBar} alt='checkbox icon' className='' />
+        </div>
+        <div className='col-span-1 px-6 py-3 flex justify-center items-center rounded-md'>
+          <div className='w-[81px] h-[22px] flex justify-center items-center '>
+            <Image src={greenDot} alt='checkbox icon' className='mr-1' />
+            <p className='font-medium'>Customer</p>
+          </div>
+        </div>
+        <div className='col-span-2 px-6 py-3 hidden lg:flex items-center justify-center'>
+          <Image src={groupImg} alt='customer group image' className='' />
+        </div>
+        <div className='col-span-4 px-6 py-3 text-sm'>
+          <p className='text-[#101828]'>Content curating app</p>
+          <p className='text-[#475467]'>Brings all your news into one place</p>
+        </div>
+        <div className='col-span-1 px-6 py-3 flex items-center justify-center'>
+          <Image src={deleteIcon} alt='customer group image' className='mr-3' />
+          <Image src={editIcon} alt='customer group image' className='' />
+        </div>
+      </div> */}
+
+      {/* Table list */}
+      {companiesList.map((company) => (
+        <div
+          className='grid grid-cols-13 text-xs border-b cursor-pointer'
+          key={company.name}
+        >
+          <div className='col-span-3 px-6 h-[72px] flex items-center'>
+            <Image src={unchecked} alt='checkbox icon' className='mr-2' />
+            <Image src={company.logo} alt='checkbox icon' className='mr-2' />
+            <div className='text-sm'>
+              <p className='font-medium text-[#101828]'>Catalog</p>
+              <p className='text-[#475467]'>catalogapp.io</p>
+            </div>
+          </div>
+          <div className='col-span-2 px-6 py-3 flex justify-center items-center'>
+            <Image src={progressBar} alt='checkbox icon' className='' />
+          </div>
+          <div className='col-span-1 px-6 py-3 flex justify-center items-center rounded-md'>
+            <div className='w-[81px] h-[22px] flex justify-center items-center '>
+              <Image src={greenDot} alt='checkbox icon' className='mr-1' />
+              <p className='font-medium'>Customer</p>
+            </div>
+          </div>
+          <div className='col-span-2 px-6 py-3 hidden lg:flex items-center justify-center'>
+            <Image src={groupImg} alt='customer group image' className='' />
+          </div>
+          <div className='col-span-4 px-6 py-3 text-sm'>
+            <p className='text-[#101828]'>{company.about}</p>
+            <p className='text-[#475467]'>{company.info}</p>
+          </div>
+          <div className='col-span-1 px-6 py-3 flex items-center justify-center'>
+            <Image
+              src={deleteIcon}
+              alt='customer group image'
+              className='mr-3'
+            />
+            <Image src={editIcon} alt='customer group image' className='' />
+          </div>
+        </div>
+      ))}
+
+      {/*  */}
+      <div className='w-full flex items-center justify-between mt-6'>
+        <div className='text-sm text-[#344054] flex items-center font-semibold '>
+          <div className='border border-[#D0D5DD] h-[36px] px-[14px] mr-3 rounded-lg flex items-center justify-center'>
+            Previous
+          </div>
+          <div className='border border-[#D0D5DD] h-[36px] px-[14px] rounded-lg flex items-center justify-center'>
+            Next
+          </div>
+        </div>
+        <div>
+          <p className='text-sm font-medium'>Page 1 of 10</p>
+        </div>
+      </div>
+
+      {/* selected components */}
+      <SelectedCompanies />
+      {/* Admin approval */}
+      <AdminApproval />
+    </div>
+  );
+}
