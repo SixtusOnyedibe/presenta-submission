@@ -35,7 +35,7 @@ export default function page() {
             Track, manage and forcast your customers and orders.
           </p>
         </div>
-        <div className='flex items-center'>
+        <div className='hidden md:flex items-center'>
           <button className='mr-3 bg-white text-sm text-[#344054] border border-[#D0D5DD] px-4 h-[40px] rounded-lg font-semibold flex items-center'>
             <Image src={importIcon} alt='import icon' className='mr-3' />
             <p>Import</p>
@@ -47,27 +47,113 @@ export default function page() {
         </div>
       </div>
       {/* Metric */}
-      <div className='grid grid-cols-3 gap-6 w-full'>
-        <div className='border border-[#EAECF0] p-5 w-full col-span-1'>
-          <div className='flex justify-between items-center mb-6'>
-            <p className='mb-6 font-semibold'>Total customers</p>
-            <Image src={burgerMenu} alt='plus icon' className='' />
+      <div className='hidden md:grid grid-cols-3 gap-6 w-full '>
+        {/* 1st */}
+        <div className='border border-[#EAECF0] p-2 md:p-3 lg:p-5 w-full col-span-1 rounded-xl'>
+          <div className='hidden md:flex justify-between items-center mb-6'>
+            <p className='lg:mb-6 font-semibold text-sm lg:text-base'>
+              Total customers
+            </p>
+            <Image
+              src={burgerMenu}
+              alt='plus icon'
+              className='cursor-pointer'
+            />
           </div>
-          <div className='flex justify-between'>
-            <div>
-              <p className='font-semibold text-4xl mb-4'>2,420</p>
-              <div className='flex'>
-                <Image src={greenArrowUp} alt='plus icon' className='' />
-                <div className='flex text-sm'>
-                  <p className='mr-1 text-[#067647]'>40%</p>
-                  <p>vs last month</p>
+          <div className='grid grid-cols-1 lg:grid-cols-13 lg:gap-2'>
+            <div className='col-span-7'>
+              <p className='font-semibold text-2xl lg:text-4xl mb-4'>2,420</p>
+              <div className='xl:flex'>
+                <div className='flex'>
+                  <Image src={greenArrowUp} alt='plus icon' className='' />
+                  <p className='mr-1 text-[#067647] text-sm'>40%</p>
+                </div>
+                <div className='block text-sm'>
+                  {/* <p className='mr-1 text-[#067647] hidden'>40%</p> */}
+                  <p className='md:block'>vs last month</p>
                 </div>
               </div>
             </div>
-            <Image src={greenUpChart} alt='plus icon' className='w-[120px]' />
+            <div className='col-span-6 w-full h-full flex items-center justify-center'>
+              <Image
+                src={greenUpChart}
+                alt='plus icon'
+                className='w-full h-full'
+              />
+            </div>
           </div>
         </div>
-        <div className='border border-[#EAECF0] p-5 w-full col-span-1'>
+        <div className='border border-[#EAECF0] p-2 md:p-3 lg:p-5 w-full col-span-1 rounded-xl'>
+          <div className='hidden md:flex justify-between items-center mb-6'>
+            <p className='lg:mb-6 font-semibold text-sm lg:text-base'>
+              Total customers
+            </p>
+            <Image
+              src={burgerMenu}
+              alt='plus icon'
+              className='cursor-pointer'
+            />
+          </div>
+          <div className='grid grid-cols-1 lg:grid-cols-13 lg:gap-2'>
+            <div className='col-span-7'>
+              <p className='font-semibold text-2xl lg:text-4xl mb-4'>2,420</p>
+              <div className='xl:flex'>
+                <div className='flex'>
+                  <Image src={greenArrowUp} alt='plus icon' className='' />
+                  <p className='mr-1 text-[#067647] text-sm'>40%</p>
+                </div>
+                <div className='block text-sm'>
+                  {/* <p className='mr-1 text-[#067647] hidden'>40%</p> */}
+                  <p className='md:block'>vs last month</p>
+                </div>
+              </div>
+            </div>
+            <div className='col-span-6 w-full h-full flex items-center justify-center'>
+              <Image
+                src={greenUpChart}
+                alt='plus icon'
+                className='w-full h-full'
+              />
+            </div>
+          </div>
+        </div>
+        <div className='border border-[#EAECF0] p-2 md:p-3 lg:p-5 w-full col-span-1 rounded-xl'>
+          <div className='hidden md:flex justify-between items-center mb-6'>
+            <p className='lg:mb-6 font-semibold text-sm lg:text-base'>
+              Total customers
+            </p>
+            <Image
+              src={burgerMenu}
+              alt='plus icon'
+              className='cursor-pointer'
+            />
+          </div>
+          <div className='grid grid-cols-1 lg:grid-cols-13 lg:gap-2'>
+            <div className='col-span-7'>
+              <p className='font-semibold text-2xl lg:text-4xl mb-4'>2,420</p>
+              <div className='xl:flex'>
+                <div className='flex'>
+                  <Image src={greenArrowUp} alt='plus icon' className='' />
+                  <p className='mr-1 text-[#067647] text-sm'>40%</p>
+                </div>
+                <div className='block text-sm'>
+                  {/* <p className='mr-1 text-[#067647] hidden'>40%</p> */}
+                  <p className='md:block'>vs last month</p>
+                </div>
+              </div>
+            </div>
+            <div className='col-span-6 w-full h-full flex items-center justify-center'>
+              <Image
+                src={greenUpChart}
+                alt='plus icon'
+                className='w-full h-full'
+              />
+            </div>
+          </div>
+        </div>
+
+        {/* Second */}
+        {/* <div className='border border-[#EAECF0] p-5 w-full col-span-1'>
           <div className='flex justify-between items-center mb-6'>
             <p className='mb-6 font-semibold'>Total customers</p>
             <Image src={burgerMenu} alt='plus icon' className='' />
@@ -85,8 +171,9 @@ export default function page() {
             </div>
             <Image src={redDownChart} alt='plus icon' className='w-[120px]' />
           </div>
-        </div>
-        <div className='border border-[#EAECF0] p-5 w-full col-span-1'>
+        </div> */}
+        {/* Third */}
+        {/* <div className='border border-[#EAECF0] p-5 w-full col-span-1'>
           <div className='flex justify-between items-center mb-6'>
             <p className='mb-6 font-semibold'>Total customers</p>
             <Image src={burgerMenu} alt='plus icon' className='' />
@@ -104,16 +191,16 @@ export default function page() {
             </div>
             <Image src={greenUpChart} alt='plus icon' className='w-[120px]' />
           </div>
-        </div>
+        </div> */}
       </div>
       {/* Filter */}
-      <div className='mt-8 mb-6 flex items-center justify-between'>
+      <div className='mt-8 mb-6 md:flex items-center justify-between'>
         <div className='flex items-center'>
           <div className='h-[40px] border border-[#D0D5DD] px-4 flex items-center mr-3 rounded-lg'>
             <p className='text-sm text-[#344054] mr-3'>All time</p>
             <Image src={purpleXicon} alt='logo' className='' />
           </div>
-          <div className='h-[40px] border border-[#D0D5DD] px-4 flex items-center mr-3 rounded-lg'>
+          <div className='h-[40px] border border-[#D0D5DD] px-4 hidden lg:flex items-center mr-3 rounded-lg'>
             <p className='text-sm text-[#344054] mr-3'>US, AU, +4</p>
             <Image src={purpleXicon} alt='logo' className='' />
           </div>
@@ -122,7 +209,7 @@ export default function page() {
             <p className='text-sm text-[#344054]'>More filter</p>
           </div>
         </div>
-        <div className='bg-[#F9F9F9] max-w-[320px] h-[40px] rounded-lg flex items-center overflow-hidden pl-3'>
+        <div className='bg-[#F9F9F9] w-full md:max-w-[320px] h-[40px] rounded-lg flex items-center overflow-hidden pl-3 mt-3 md:mt-0'>
           <Image src={searchIcon} alt='logo' className='mr-3' />
           <input
             type='text'

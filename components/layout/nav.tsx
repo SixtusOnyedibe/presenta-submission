@@ -12,7 +12,7 @@ import closeIcon from '../../public/nav/x-close-icon.svg';
 
 export default function Nav() {
   return (
-    <div className='w-full px-6 relative h-full'>
+    <div className='w-full px-3 lg:px-6 relative h-full'>
       <div className='mb-3'>
         <Image src={logoMark} alt='logo' className='' />
       </div>
@@ -52,13 +52,13 @@ export default function Nav() {
       </ul>
 
       {/*  */}
-      <div className='px-5 absolute bottom-10 left-0'>
-        <div className='w-full bg-[#151416] p-4 rounded-lg '>
+      <div className='lg:px-5 absolute bottom-10 left-0'>
+        <div className='w-full bg-[#151416] px-2 py-4 lg:p-4 rounded-lg '>
           <div className='w-full flex justify-between mb-4 items-start'>
             <Image src={progressCircle} alt='logo' className='mr-3' />
             <Image src={closeIcon} alt='logo' className='' />
           </div>
-          <div className='text-sm'>
+          <div className='text-xs lg:text-sm'>
             <h3 className='text-white font-semibold'>Used space</h3>
             <p className='text-[#BEBEBE] mb-4'>
               Your team has used 80% of your available space. Need more?

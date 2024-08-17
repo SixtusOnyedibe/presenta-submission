@@ -38,7 +38,8 @@ export default function CompanyRowEntry({ company }: { company: Company }) {
         toogleAddCompanies(company);
       }}
     >
-      <div className='col-span-3 px-6 h-[72px] flex items-center'>
+      {/* name */}
+      <div className='col-span-5 lg:col-span-3 px-6 h-[72px] flex items-center'>
         {isCheck ? (
           <Image src={checked} alt='checkbox icon' className='mr-2' />
         ) : (
@@ -46,29 +47,41 @@ export default function CompanyRowEntry({ company }: { company: Company }) {
         )}
 
         <Image src={company.logo} alt='checkbox icon' className='mr-2' />
-        <div className='text-sm'>
+        <div className='text-sm hidden md:block'>
           <p className='font-medium text-[#101828]'>{company.name}</p>
           <p className='text-[#475467]'>{company.link}</p>
         </div>
       </div>
-      <div className='col-span-2 px-6 py-3 flex justify-center items-center'>
+      {/* progress bar */}
+
+      <div className='hidden lg:col-span-2 px-6 py-3 lg:flex justify-center items-center'>
         <Image src={progressBar} alt='checkbox icon' className='' />
       </div>
-      <div className='col-span-1 px-6 py-3 flex justify-center items-center rounded-md'>
+      {/* customer */}
+
+      <div className='col-span-4 lg:col-span-1 px-6 py-3 flex justify-center items-center rounded-md'>
         <div className='w-[81px] h-[22px] flex justify-center items-center '>
           <Image src={greenDot} alt='checkbox icon' className='mr-1' />
           <p className='font-medium'>Customer</p>
         </div>
       </div>
-      <div className='col-span-2 px-6 py-3 hidden lg:flex items-center justify-center'>
+      {/* group pic */}
+      <div className='col-span-2 px-6 py-3 hidden xl:flex items-center justify-center'>
         <Image src={groupImg} alt='customer group image' className='' />
       </div>
-      <div className='col-span-4 px-6 py-3 text-sm'>
+      {/* about & info */}
+
+      <div className='col-span-4 px-6 py-3 text-sm hidden lg:block'>
         <p className='text-[#101828]'>{company.about}</p>
         <p className='text-[#475467]'>{company.info}</p>
       </div>
-      <div className='col-span-1 px-6 py-3 flex items-center justify-center'>
-        <Image src={deleteIcon} alt='customer group image' className='mr-3' />
+      {/* delete icon */}
+      <div className='col-span-4 lg:col-span-2 px-6 py-3 flex items-center justify-center'>
+        <Image
+          src={deleteIcon}
+          alt='customer group image'
+          className='mr-3 w-[20px]'
+        />
         <Image src={editIcon} alt='customer group image' className='' />
       </div>
     </div>

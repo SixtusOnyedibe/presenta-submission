@@ -13,11 +13,11 @@ export default function RootLayout({
 }>) {
   return (
     <section>
-      <div className='bg-[#F1F1F1] min-h-[100vh] w-full grid grid-cols-5 '>
-        <section className='col-span-1 pt-8'>
+      <div className='bg-[#F1F1F1] min-h-[100vh] w-full md:grid md:grid-cols-5 '>
+        <section className='hidden md:block col-span-1 pt-8'>
           <Nav />
         </section>
-        <section className='col-span-4 bg-white w-full h-full rounded-tl-3xl p-8'>
+        <section className='md:col-span-4 bg-white w-full h-full rounded-tl-3xl p-5 md:p-8'>
           {children}
         </section>
       </div>
