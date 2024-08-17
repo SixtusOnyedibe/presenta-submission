@@ -1,20 +1,14 @@
-import unchecked from '../../../public/dashboard/checkbox-unchecked.svg';
-import checked from '../../../public/dashboard/checkbox-checked.svg';
 import catalog from '../../../public/dashboard/catalog-icon.svg';
-import progressBar from '../../../public/dashboard/progress-bar.svg';
-import greenDot from '../../../public/dashboard/green-dot.svg';
-import groupImg from '../../../public/dashboard/customers-group-image.svg';
-import deleteIcon from '../../../public/dashboard/delete-icon.svg';
-import editIcon from '../../../public/dashboard/edit-icon.svg';
-import capsuleIcon from '../../../public/dashboard/CommandR-icon.svg';
-import commandRIcon from '../../../public/dashboard/hourglass-icon.svg';
-import hourglassIcon from '../../../public/dashboard/layer-icon.svg';
-import layersIcon from '../../../public/dashboard/quotient-icon.svg';
+import capsuleIcon from '../../../public/dashboard/capsule-icon.svg';
+import commandRIcon from '../../../public/dashboard/CommandR-icon.svg';
+import hourglassIcon from '../../../public/dashboard/hourglass-icon.svg';
+import layersIcon from '../../../public/dashboard/layer-icon.svg';
 import quotientIcon from '../../../public/dashboard/quotient-icon.svg';
 import sisyphusIcon from '../../../public/dashboard/sisyphus-icon.svg';
 
 const companiesList = [
   {
+    id: 1,
     logo: catalog,
     name: 'Catalog',
     link: 'catalogapp.io',
@@ -24,6 +18,7 @@ const companiesList = [
     info: 'Brings all your news into one place',
   },
   {
+    id: 2,
     logo: capsuleIcon,
     name: 'Capsule',
     link: 'getcapsule.com',
@@ -33,6 +28,7 @@ const companiesList = [
     info: 'Super lightweight design app',
   },
   {
+    id: 3,
     logo: commandRIcon,
     name: 'Command+R',
     link: 'cmdr.ai',
@@ -42,6 +38,7 @@ const companiesList = [
     info: 'AI and machine learning data',
   },
   {
+    id: 4,
     logo: hourglassIcon,
     name: 'Hourglass',
     link: 'hourglass.app',
@@ -51,6 +48,7 @@ const companiesList = [
     info: 'Time management and productivity',
   },
   {
+    id: 5,
     logo: layersIcon,
     name: 'Layers',
     link: 'getlayers.io',
@@ -60,6 +58,7 @@ const companiesList = [
     info: 'Connect web apps seamlessly',
   },
   {
+    id: 6,
     logo: quotientIcon,
     name: 'Quotient',
     link: 'quotient.co',
@@ -69,6 +68,7 @@ const companiesList = [
     info: 'Web-based sales doc management',
   },
   {
+    id: 7,
     logo: sisyphusIcon,
     name: 'Sisyphus',
     link: 'sisyphus.com',

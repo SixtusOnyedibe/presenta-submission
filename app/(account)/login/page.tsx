@@ -1,10 +1,14 @@
+'use client';
+
 import Image from 'next/image';
 import googleImg from '../../../public/Google__G__Logo 1.svg';
 import backgroundImage from '../../../public/homepage-background-image.png';
 import horizontLogo from '../../../public/horizon-logo.png';
 import themeChange from '../../../public/theme-image.svg';
+import { useRouter } from 'next/navigation';
 
 export default function page() {
+  const router = useRouter();
   return (
     <div className='bg-white flex flex-col-reverse lg:grid md:grid-cols-5 max-h-[1024px]'>
       <section className=' col-span-2 mt-5 lg:mt-20 relative pb-20'>
@@ -34,7 +38,7 @@ export default function page() {
               </p>
               <hr className='border-[#E0E5F2] basis-5/12' />
             </div>
-            <form>
+            <form onSubmit={(e) => e.preventDefault()}>
               <label htmlFor='email'>
                 <p className='text-sm font-medium mb-2'>Email*</p>
                 <input
@@ -64,7 +68,10 @@ export default function page() {
                   Forgot password?
                 </p>
               </div>
-              <button className='w-full h-[50px] bg-black rounded-2xl text-white text-sm font-bold'>
+              <button
+                className='w-full h-[50px] bg-black rounded-2xl text-white text-sm font-bold'
+                onClick={() => router.push('/dashboard')}
+              >
                 Sign In
               </button>
             </form>
