@@ -62,14 +62,15 @@ export default function page() {
           </div>
           <div className='grid grid-cols-1 lg:grid-cols-13 lg:gap-2'>
             <div className='col-span-7'>
-              <p className='font-semibold text-2xl lg:text-4xl mb-4'>2,420</p>
+              <p className='font-semibold text-2xl lg:text-4xl mb-4 text-[#101828]'>
+                2,420
+              </p>
               <div className='xl:flex'>
                 <div className='flex'>
                   <Image src={greenArrowUp} alt='plus icon' className='' />
                   <p className='mr-1 text-[#067647] text-sm'>40%</p>
                 </div>
                 <div className='block text-sm'>
-                  {/* <p className='mr-1 text-[#067647] hidden'>40%</p> */}
                   <p className='md:block'>vs last month</p>
                 </div>
               </div>
@@ -86,7 +87,7 @@ export default function page() {
         <div className='border border-[#EAECF0] p-2 md:p-3 lg:p-5 w-full col-span-1 rounded-xl'>
           <div className='hidden md:flex justify-between items-center mb-6'>
             <p className='lg:mb-6 font-semibold text-sm lg:text-base'>
-              Total customers
+              Members
             </p>
             <Image
               src={burgerMenu}
@@ -96,21 +97,22 @@ export default function page() {
           </div>
           <div className='grid grid-cols-1 lg:grid-cols-13 lg:gap-2'>
             <div className='col-span-7'>
-              <p className='font-semibold text-2xl lg:text-4xl mb-4'>2,420</p>
+              <p className='font-semibold text-2xl lg:text-4xl mb-4 text-[#101828]'>
+                1,210
+              </p>
               <div className='xl:flex'>
                 <div className='flex'>
-                  <Image src={greenArrowUp} alt='plus icon' className='' />
-                  <p className='mr-1 text-[#067647] text-sm'>40%</p>
+                  <Image src={redArrowUp} alt='plus icon' className='' />
+                  <p className='mr-1 text-[#B42318] text-sm'>10%</p>
                 </div>
                 <div className='block text-sm'>
-                  {/* <p className='mr-1 text-[#067647] hidden'>40%</p> */}
                   <p className='md:block'>vs last month</p>
                 </div>
               </div>
             </div>
             <div className='col-span-6 w-full h-full flex items-center justify-center'>
               <Image
-                src={greenUpChart}
+                src={redDownChart}
                 alt='plus icon'
                 className='w-full h-full'
               />
@@ -120,7 +122,7 @@ export default function page() {
         <div className='border border-[#EAECF0] p-2 md:p-3 lg:p-5 w-full col-span-1 rounded-xl'>
           <div className='hidden md:flex justify-between items-center mb-6'>
             <p className='lg:mb-6 font-semibold text-sm lg:text-base'>
-              Total customers
+              Active now
             </p>
             <Image
               src={burgerMenu}
@@ -130,14 +132,15 @@ export default function page() {
           </div>
           <div className='grid grid-cols-1 lg:grid-cols-13 lg:gap-2'>
             <div className='col-span-7'>
-              <p className='font-semibold text-2xl lg:text-4xl mb-4'>2,420</p>
+              <p className='font-semibold text-2xl lg:text-4xl mb-4 text-[#101828]'>
+                316
+              </p>
               <div className='xl:flex'>
                 <div className='flex'>
                   <Image src={greenArrowUp} alt='plus icon' className='' />
-                  <p className='mr-1 text-[#067647] text-sm'>40%</p>
+                  <p className='mr-1 text-[#067647] text-sm'>20%</p>
                 </div>
                 <div className='block text-sm'>
-                  {/* <p className='mr-1 text-[#067647] hidden'>40%</p> */}
                   <p className='md:block'>vs last month</p>
                 </div>
               </div>
@@ -151,47 +154,6 @@ export default function page() {
             </div>
           </div>
         </div>
-
-        {/* Second */}
-        {/* <div className='border border-[#EAECF0] p-5 w-full col-span-1'>
-          <div className='flex justify-between items-center mb-6'>
-            <p className='mb-6 font-semibold'>Total customers</p>
-            <Image src={burgerMenu} alt='plus icon' className='' />
-          </div>
-          <div className='flex justify-between'>
-            <div>
-              <p className='font-semibold text-4xl mb-4'>1,210</p>
-              <div className='flex'>
-                <Image src={redArrowUp} alt='plus icon' className='' />
-                <div className='flex text-sm'>
-                  <p className='mr-1 text-[#B42318]'>40%</p>
-                  <p>vs last month</p>
-                </div>
-              </div>
-            </div>
-            <Image src={redDownChart} alt='plus icon' className='w-[120px]' />
-          </div>
-        </div> */}
-        {/* Third */}
-        {/* <div className='border border-[#EAECF0] p-5 w-full col-span-1'>
-          <div className='flex justify-between items-center mb-6'>
-            <p className='mb-6 font-semibold'>Total customers</p>
-            <Image src={burgerMenu} alt='plus icon' className='' />
-          </div>
-          <div className='flex justify-between'>
-            <div>
-              <p className='font-semibold text-4xl mb-4'>316</p>
-              <div className='flex'>
-                <Image src={greenArrowUp} alt='plus icon' className='' />
-                <div className='flex text-sm'>
-                  <p className='mr-1 text-[#067647]'>20%</p>
-                  <p>vs last month</p>
-                </div>
-              </div>
-            </div>
-            <Image src={greenUpChart} alt='plus icon' className='w-[120px]' />
-          </div>
-        </div> */}
       </div>
       {/* Filter */}
       <div className='mt-8 mb-6 md:flex items-center justify-between'>
@@ -221,23 +183,23 @@ export default function page() {
 
       {/* Table */}
       <div className='grid grid-cols-13 text-xs border-b'>
-        <div className='col-span-3 px-6 py-3 flex items-center'>
+        <div className='col-span-5 lg:col-span-3 px-6 flex items-center justify-start'>
           <Image src={checkboxMinus} alt='checkbox icon' className='mr-2' />
           <p>Company</p>
         </div>
-        <div className='col-span-2 px-6 py-3'>
+        <div className='hidden lg:col-span-2 px-6 py-3 lg:flex justify-start items-center'>
           <p>License use</p>
         </div>
-        <div className='col-span-1 px-6 py-3'>
+        <div className='col-span-4 lg:col-span-2 xl:col-span-1 px-6 py-3 flex justify-center xl:justify-start items-center rounded-md'>
           <p>Status</p>
         </div>
-        <div className='col-span-2 px-6 py-3'>
+        <div className='col-span-2 px-6 py-3 hidden xl:flex items-center justify-start'>
           <p>Users</p>
         </div>
-        <div className='col-span-4 px-6 py-3'>
+        <div className='col-span-4 px-6 py-3 text-sm hidden lg:flex items-center justify-start'>
           <p>About</p>
         </div>
-        <div className='col-span-1 px-6 py-3'>
+        <div className='col-span-4 lg:col-span-2 xl:col-span-1 px-6 py-3 flex items-center justify-start'>
           <p></p>
         </div>
       </div>

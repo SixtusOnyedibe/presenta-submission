@@ -7,8 +7,8 @@ import projectIcon from '../../public/nav/project-icon.svg';
 import tasksIcon from '../../public/nav/tasks-icon.svg';
 import reportingIcon from '../../public/nav/reporting-icon.svg';
 import usersIcon from '../../public/nav/users-icon.svg';
-import progressCircle from '../../public/nav/progress-circle.svg';
 import closeIcon from '../../public/nav/x-close-icon.svg';
+import { RingProgress, Text } from '@mantine/core';
 
 export default function Nav() {
   return (
@@ -24,28 +24,28 @@ export default function Nav() {
           placeholder='Search'
         />
       </div>
-      <ul>
-        <li className='flex items-center w-full mb-5'>
+      <ul className='text-[#414141]'>
+        <li className='flex items-center w-full mb-5 cursor-pointer'>
           <Image src={homeIcon} alt='logo' className='mr-3 ' />
           <p>Home</p>
         </li>
-        <li className='flex items-center w-full mb-5'>
+        <li className='flex items-center w-full mb-5 cursor-pointer'>
           <Image src={dashboardIcon} alt='logo' className='mr-3' />
           <p className='font-semibold text-[#0A29CF]'>Dashboard</p>
         </li>
-        <li className='flex items-center w-full mb-5'>
+        <li className='flex items-center w-full mb-5 cursor-pointer'>
           <Image src={projectIcon} alt='logo' className='mr-3' />
           <p>Projects</p>
         </li>
-        <li className='flex items-center w-full mb-5'>
+        <li className='flex items-center w-full mb-5 cursor-pointer'>
           <Image src={tasksIcon} alt='logo' className='mr-3' />
           <p>Tasks</p>
         </li>
-        <li className='flex items-center w-full mb-5'>
+        <li className='flex items-center w-full mb-5 cursor-pointer'>
           <Image src={reportingIcon} alt='logo' className='mr-3' />
           <p>Reporting</p>
         </li>
-        <li className='flex items-center w-full mb-5'>
+        <li className='flex items-center w-full mb-5 cursor-pointer'>
           <Image src={usersIcon} alt='logo' className='mr-3' />
           <p>Users</p>
         </li>
@@ -55,7 +55,17 @@ export default function Nav() {
       <div className='lg:px-5 absolute bottom-10 left-0'>
         <div className='w-full bg-[#151416] px-2 py-4 lg:p-4 rounded-lg '>
           <div className='w-full flex justify-between mb-4 items-start'>
-            <Image src={progressCircle} alt='logo' className='mr-3' />
+            <RingProgress
+              sections={[{ value: 80, color: '#F4EBFF' }]}
+              roundCaps
+              rootColor='#0A29CF'
+              thickness={6}
+              label={
+                <Text c='#F4EBFF' fw={700} ta='center' size='md'>
+                  80%
+                </Text>
+              }
+            />
             <Image src={closeIcon} alt='logo' className='' />
           </div>
           <div className='text-xs lg:text-sm'>
