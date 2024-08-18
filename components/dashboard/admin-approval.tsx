@@ -13,7 +13,7 @@ export default function AdminApproval() {
         className='w-[100vw] h-[100vh] fixed top-0 left-0 bg-black opacity-10'
         onClick={() => setApproveCompanies(false)}
       ></div>
-      <div className='w-[400px] h-[311px] fixed bottom-[78px] right-0 bg-white px-[17px] pt-[20px] rounded-2xl'>
+      <div className='w-full sm:w-[400px] h-[311px] fixed bottom-0 sm:bottom-[78px] right-0 bg-white px-5 md:px-[17px] pt-[20px] rounded-2xl'>
         <div className='flex items-center justify-between h-[56px] border-b border-b-[#DFDFDF]'>
           <div className='flex items-center'>
             <Image src={lockIcon} alt='lock icon' className='mr-3' />

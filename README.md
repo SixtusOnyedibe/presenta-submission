@@ -1,12 +1,14 @@
 # Procurement Automation App
 
-Basic feature for Horizon dashboard
+Basic feature for Horizon dashboard.
 
 ## Libraries & Frameworks
 
 This project uses:
 
 - React, Next.js
+- Mantine for charts
+- Zustand for managing state
 
 ## Getting Started
 
