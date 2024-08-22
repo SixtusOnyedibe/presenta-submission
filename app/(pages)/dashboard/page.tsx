@@ -18,6 +18,7 @@ import AdminApproval from '../../../components/dashboard/admin-approval';
 import CompanyRowEntry from '../../../components/dashboard/company-row-entry';
 import DashboardStore from '../../../store/dashboard-store';
 import { useRouter } from 'next/navigation';
+import hasTimestampElapsed from '../../../lib/timestampExpired';
 
 export default function Page() {
   const router = useRouter();
@@ -26,12 +27,26 @@ export default function Page() {
   if (!horizonUser && !horizonUserSession) {
     router.push('/login');
   }
+  if (horizonUser) {
+    //checks if user session is expired
+    const userData = JSON.parse(horizonUser);
+    const timeExpired = hasTimestampElapsed(userData.expiresIn);
+    if (timeExpired) {
+      localStorage.removeItem('horizon_user');
+      router.push('/login');
+    }
+  }
+
   const { isCompaniesSelected, approveCompanies } = DashboardStore(
     (state) => state
   );
 
   return (
-    <div className='w-full relative'>
+    <div
+      className={`w-full relative ${
+        isCompaniesSelected ? 'pb-[68px] md:pb-0' : 'pb-0'
+      }`}
+    >
       {/* Welcome olivia */}
       <div className='flex w-full justify-between items-start mb-5'>
         <div>

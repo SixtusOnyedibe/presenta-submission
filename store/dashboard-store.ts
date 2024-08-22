@@ -1,5 +1,4 @@
 import { create } from 'zustand';
-import { persist } from 'zustand/middleware';
 
 interface Company {
   id: number;
@@ -22,38 +21,28 @@ interface DashboardStoreInterface {
   setApproveCompanies: (value: boolean) => void;
 }
 
-const useDashboardStore = create<DashboardStoreInterface>()(
-  //   persist(
-  (set) => ({
-    isCompaniesSelected: false,
-    setIsCompaniesSelected: (value) =>
-      set(() => ({ isCompaniesSelected: value })),
-    //   numOfSelectedCompanies: 0,
-    //   setNumOfSelComps: (value) => set(() => ({ numOfSelectedCompanies: 1 })),
-    listOfCompanies: [],
-    toogleAddCompanies: (value) =>
-      set((state) => {
-        const list = state.listOfCompanies;
-        const index = list.findIndex((listItem) => listItem.id === value.id);
+const useDashboardStore = create<DashboardStoreInterface>()((set) => ({
+  isCompaniesSelected: false,
+  setIsCompaniesSelected: (value) =>
+    set(() => ({ isCompaniesSelected: value })),
 
-        if (index !== -1) {
-          // If the item is found, remove it from the list
-          list.splice(index, 1);
-        } else {
-          // If the item is not found, add it to the list
-          list.push(value);
-        }
+  listOfCompanies: [],
+  toogleAddCompanies: (value) =>
+    set((state) => {
+      const list = state.listOfCompanies;
+      const index = list.findIndex((listItem) => listItem.id === value.id);
 
-        // Return the updated list
-        return { listOfCompanies: list };
-      }),
-    removeAllCompanies: () => set(() => ({ listOfCompanies: [] })),
-    approveCompanies: false,
-    setApproveCompanies: (value) => set(() => ({ approveCompanies: value })),
-  })
+      if (index !== -1) {
+        list.splice(index, 1);
+      } else {
+        list.push(value);
+      }
 
-  // { name: 'selected-companies' }
-  //   )
-);
+      return { listOfCompanies: list };
+    }),
+  removeAllCompanies: () => set(() => ({ listOfCompanies: [] })),
+  approveCompanies: false,
+  setApproveCompanies: (value) => set(() => ({ approveCompanies: value })),
+}));
 
 export default useDashboardStore;

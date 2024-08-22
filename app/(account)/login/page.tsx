@@ -102,7 +102,7 @@ export default function Page() {
               <label htmlFor='email'>
                 <p className='text-sm font-medium mb-2'>Email*</p>
                 <input
-                  type='text'
+                  type='email'
                   id='email'
                   name='username'
                   className='w-full h-[50px] bg-white border border-gray-[#E0E5F2] px-5 font-medium text-gray-400 rounded-2xl mb-5 text-sm focus:bg-white outline-none active:bg-white'
@@ -114,7 +114,7 @@ export default function Page() {
               </label>
               <label htmlFor='password'>
                 <p className='text-sm font-medium mb-2'>Password*</p>
-                <div className='flex h-[50px] bg-white border border-gray-[#E0E5F2] w-full pr-5 items-center rounded-2xl overflow-hidden'>
+                <div className='h-[50px] bg-white border border-gray-[#E0E5F2] w-full items-center rounded-2xl overflow-hidden relative'>
                   <input
                     type={showPassword ? 'text' : 'password'}
                     id='password'
@@ -126,7 +126,7 @@ export default function Page() {
                     required
                   />
                   <div
-                    className='cursor-pointer w-[20px]'
+                    className='cursor-pointer w-[20px] bg-none absolute top-[50%] -translate-y-[50%] right-5'
                     onClick={() => setShowPassword(!showPassword)}
                   >
                     {showPassword ? (
@@ -145,7 +145,12 @@ export default function Page() {
                     checked={isChecked}
                     onChange={handleCheckboxChange}
                   />
-                  <p className='text-[#2B3674] text-sm'>Keep me logged in</p>
+                  <p
+                    className='text-[#2B3674] text-sm cursor-pointer'
+                    onClick={() => setIsChecked(!isChecked)}
+                  >
+                    Keep me logged in
+                  </p>
                 </div>
                 <p className='text-sm text-[#4318FF] font-medium'>
                   Forgot password?
@@ -158,7 +163,7 @@ export default function Page() {
           </div>
         </div>
         <div className='absolute pb-[40px] bottom-0 left-0 px-5'>
-          <p className='text-sm '>
+          <p className='text-sm text-[#A3AED0] '>
             © 2022 Horizon. All Rights Reserved. Made with love by Simmmple!
           </p>
         </div>
