@@ -23,7 +23,11 @@ export default function MobileNav() {
           <nav className='flex md:hidden bg-[#F1F1F1] h-[10vh] w-full items-center justify-between'>
             <div>
               <div className='mb-3 flex items-center'>
-                <Image src={logoMark} alt='logo' className='mr-3' />
+                <Image
+                  src={logoMark}
+                  alt='logo'
+                  className='mr-3 cursor-pointer'
+                />
                 <p className='text-[#6941C6] font-semibold'>Horizon</p>
               </div>
             </div>

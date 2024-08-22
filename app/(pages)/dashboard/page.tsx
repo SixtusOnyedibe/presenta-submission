@@ -17,8 +17,15 @@ import SelectedCompanies from '../../../components/dashboard/selected-companies'
 import AdminApproval from '../../../components/dashboard/admin-approval';
 import CompanyRowEntry from '../../../components/dashboard/company-row-entry';
 import DashboardStore from '../../../store/dashboard-store';
+import { useRouter } from 'next/navigation';
 
-export default function page() {
+export default function Page() {
+  const router = useRouter();
+  const horizonUser = localStorage.getItem('horizon_user');
+  const horizonUserSession = sessionStorage.getItem('horizon_user');
+  if (!horizonUser && !horizonUserSession) {
+    router.push('/login');
+  }
   const { isCompaniesSelected, approveCompanies } = DashboardStore(
     (state) => state
   );

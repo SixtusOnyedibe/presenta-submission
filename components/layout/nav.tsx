@@ -13,7 +13,7 @@ import { RingProgress, Text } from '@mantine/core';
 export default function Nav() {
   return (
     <div className='w-full px-3 lg:px-6 relative h-full'>
-      <div className='mb-3'>
+      <div className='mb-3 cursor-pointer'>
         <Image src={logoMark} alt='logo' className='' />
       </div>
       <div className='bg-[#F9F9F9] w-full h-[44px] rounded-lg flex items-center overflow-hidden pl-3 mb-8'>
