@@ -22,7 +22,7 @@ export const TToaster = ({ errorMessage, setErrorMessage }: Errormessage) => {
   return (
     <>
       {errorMessage && (
-        <div className='fixed top-10 right-10 h-[56px] w-[343px] rounded-xl bg-[#FFEFED] z-50 flex items-center px-4 text-sm'>
+        <div className='fixed top-10 right-[50%] translate-x-[50%] md:translate-x-0 md:right-10 h-[56px] w-[343px] rounded-xl bg-[#FFEFED] z-50 flex items-center px-4 text-sm'>
           <p className='mx-auto text-black'>
             Login failed please check your credentials
           </p>
