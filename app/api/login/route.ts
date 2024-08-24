@@ -19,8 +19,10 @@ export async function POST(req: Request | NextRequest) {
 
     const data = await response.json();
 
-    if (data.statusCode === 400) {
-      return new NextResponse(JSON.stringify(data), { status: 400 });
+    if (response.status !== 200) {
+      return new NextResponse(JSON.stringify(data), {
+        status: response.status,
+      });
     }
 
     return new NextResponse(JSON.stringify(data), { status: 200 });
@@ -30,7 +32,7 @@ export async function POST(req: Request | NextRequest) {
         message: 'Login failed please check your credentials',
         error,
       }),
-      { status: 500 }
+      { status: 400 }
     );
   }
 }

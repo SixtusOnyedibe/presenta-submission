@@ -20,6 +20,7 @@ export default function PagesLayout({
     if (!horizonUser && !horizonUserSession) {
       router.push('/login');
     }
+
     if (horizonUser) {
       //checks if user session is expired
       const userData = JSON.parse(horizonUser);
